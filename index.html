@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI Knowledge Analytics — Power BI Development Portfolio</title>
+<meta name="description" content="Power BI developer portfolio — dashboards spanning sales, operations, customer analytics, and project management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav">
+  <a href="#top" class="nav__mark">
+    <span class="nav__mark-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="12" width="4" height="10" rx="1" fill="currentColor"/><rect x="10" y="6" width="4" height="16" rx="1" fill="currentColor"/><rect x="18" y="2" width="4" height="20" rx="1" fill="currentColor"/></svg>
+    </span>
+    BI Knowledge Analytics
+  </a>
+  <nav class="nav__links">
+    <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav__cta">Let's talk</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__copy">
+      <p class="eyebrow">Power BI Development &amp; Data Storytelling</p>
+      <h1 class="hero__title">Reports people<br>actually open <span class="hero__title-accent">twice.</span></h1>
+      <p class="hero__sub">I design and build Power BI dashboards that turn spreadsheets and warehouse tables into decisions — data modeling, DAX, and interface design, end to end.</p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">View 14 dashboards</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>14</dt><dd>dashboards shipped</dd></div>
+        <div><dt>7</dt><dd>industries covered</dd></div>
+        <div><dt>DAX</dt><dd>modeling &amp; measures</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero__widget" aria-hidden="true">
+      <div class="live-dash">
+        <div class="live-dash__bar">
+          <span class="live-dash__dot"></span>
+          <span class="live-dash__dot"></span>
+          <span class="live-dash__dot"></span>
+          <span class="live-dash__title">live_dashboard.pbix</span>
+        </div>
+        <div class="live-dash__kpis">
+          <div class="kpi">
+            <span class="kpi__label">Revenue</span>
+            <span class="kpi__value" data-count="874" data-prefix="$" data-suffix="M">$0M</span>
+            <span class="kpi__delta kpi__delta--up">▲ 12.4%</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi__label">Conversion</span>
+            <span class="kpi__value" data-count="61.3" data-decimals="1" data-suffix="%">0%</span>
+            <span class="kpi__delta kpi__delta--up">▲ 2.0%</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi__label">Churn</span>
+            <span class="kpi__value" data-count="42.7" data-decimals="1" data-suffix="%">0%</span>
+            <span class="kpi__delta kpi__delta--down">▼ 3.1%</span>
+          </div>
+        </div>
+        <div class="live-dash__chart">
+          <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2F6F5E" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#2F6F5E" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="chart-fill" d="M0,90 L30,75 L60,82 L90,55 L120,60 L150,40 L180,48 L210,30 L240,35 L270,20 L300,28 L330,15 L360,22 L400,10 L400,120 L0,120 Z" fill="url(#chartFill)"/>
+            <path class="chart-line" d="M0,90 L30,75 L60,82 L90,55 L120,60 L150,40 L180,48 L210,30 L240,35 L270,20 L300,28 L330,15 L360,22 L400,10" fill="none" stroke="#2F6F5E" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="live-dash__bars">
+          <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:52%"></span>
+          <span style="--h:80%"></span><span style="--h:38%"></span><span style="--h:70%"></span>
+          <span style="--h:58%"></span><span style="--h:90%"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS STRIP ============ -->
+  <section class="skillstrip">
+    <div class="skillstrip__track">
+      <span>Power BI Desktop &amp; Service</span><span>·</span>
+      <span>DAX</span><span>·</span>
+      <span>Power Query / M</span><span>·</span>
+      <span>Data Modeling</span><span>·</span>
+      <span>SQL</span><span>·</span>
+      <span>Star Schemas</span><span>·</span>
+      <span>Row-Level Security</span><span>·</span>
+      <span>Forecasting</span><span>·</span>
+      <span>Dashboard UX</span><span>·</span>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Fourteen dashboards, <br>four kinds of problem.</h2>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects by category">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter" data-filter="sales" role="tab" aria-selected="false">Sales &amp; Revenue</button>
+      <button class="filter" data-filter="pm" role="tab" aria-selected="false">Project Management</button>
+      <button class="filter" data-filter="customer" role="tab" aria-selected="false">Customer Analytics</button>
+      <button class="filter" data-filter="ops" role="tab" aria-selected="false">Operations</button>
+    </div>
+
+    <div class="grid" id="project-grid"><!-- injected by script.js --></div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section class="approach" id="approach">
+    <div class="section-head">
+      <p class="eyebrow">How I work</p>
+      <h2>From raw table<br>to trusted report.</h2>
+    </div>
+    <div class="approach__grid">
+      <div class="approach__item">
+        <span class="approach__mark">Model</span>
+        <p>Star schemas, clean relationships, and DAX measures built for performance — not just to make one chart work.</p>
+      </div>
+      <div class="approach__item">
+        <span class="approach__mark">Design</span>
+        <p>Layouts prioritize the number that matters most, with drill-downs and filters for the questions that come next.</p>
+      </div>
+      <div class="approach__item">
+        <span class="approach__mark">Validate</span>
+        <p>Every figure is checked against the source before a dashboard ships — a chart is only as good as its data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Have a dataset that<br>deserves a better dashboard?</h2>
+    <div class="contact__links">
+      <a href="mailto:hello@rehmananalytics.com" class="contact__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+        hello@rehmananalytics.com
+      </a>
+      <a href="https://github.com/BI-KnowledgeAnalytics" class="contact__link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.98 0 1.98.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.78 1.08.78 2.18v3.23c0 .32.21.67.8.56C20.71 21.39 24 17.09 24 12c0-6.27-5.23-11.5-12-11.5Z"/></svg>
+        github.com/BI-KnowledgeAnalytics
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>BI Knowledge Analytics</span>
+  <span>Built with Power BI, DAX, and a lot of filtered tables.</span>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightbox-close" aria-label="Close">✕</button>
+  <div class="lightbox__inner">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox__meta">
+      <p class="lightbox__cat" id="lightbox-cat"></p>
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+      <ul class="lightbox__tags" id="lightbox-tags"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
