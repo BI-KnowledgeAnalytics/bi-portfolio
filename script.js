@@ -103,7 +103,7 @@ const PROJECTS = [
     title: "Performance Analysis for CEO",
     category: "sales",
     categoryLabel: "Sales & Revenue",
-    desc: "Chandoo.org contest entry benchmarking sales team performance WoW / MoM / QoQ against shipment volume and product category.",
+    desc: "sales team performance WoW / MoM / QoQ against shipment volume and product category.",
     tags: ["Executive Reporting", "WoW/MoM/QoQ", "Design"]
   },
   {
