@@ -165,6 +165,15 @@ filterButtons.forEach(btn => {
   });
 });
 
+filterButtons.forEach(btn => {
+  const filter = btn.dataset.filter;
+  const count = filter === "all" ? PROJECTS.length : PROJECTS.filter(p => p.category === filter).length;
+  const badge = document.createElement("span");
+  badge.className = "filter__count";
+  badge.textContent = count;
+  btn.appendChild(badge);
+});
+
 // ============================================================
 // LIGHTBOX
 // ============================================================
@@ -175,15 +184,25 @@ const lightboxDesc = document.getElementById("lightbox-desc");
 const lightboxCat = document.getElementById("lightbox-cat");
 const lightboxTags = document.getElementById("lightbox-tags");
 const lightboxClose = document.getElementById("lightbox-close");
+const lightboxPrev = document.getElementById("lightbox-prev");
+const lightboxNext = document.getElementById("lightbox-next");
+const lightboxZoom = document.getElementById("lightbox-zoom");
+const lightboxCount = document.getElementById("lightbox-count");
+let lightboxIndex = 0;
 
-function openLightbox(index){
-  const p = PROJECTS[index];
+function renderLightbox(p){
   lightboxImg.src = p.img;
   lightboxImg.alt = p.title + " full dashboard screenshot";
   lightboxTitle.textContent = p.title;
   lightboxDesc.textContent = p.desc;
   lightboxCat.textContent = p.categoryLabel;
   lightboxTags.innerHTML = p.tags.map(t => `<li>${t}</li>`).join("");
+  lightboxCount.textContent = (lightboxIndex + 1) + " / " + PROJECTS.length;
+}
+
+function openLightbox(index){
+  lightboxIndex = index;
+  renderLightbox(PROJECTS[lightboxIndex]);
   lightbox.classList.add("is-open");
   lightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -194,11 +213,26 @@ function closeLightbox(){
   lightbox.classList.remove("is-open");
   lightbox.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+  lightboxImg.classList.remove("is-zoomed");
+}
+
+function stepLightbox(dir){
+  lightboxIndex = (lightboxIndex + dir + PROJECTS.length) % PROJECTS.length;
+  renderLightbox(PROJECTS[lightboxIndex]);
 }
 
 lightboxClose.addEventListener("click", closeLightbox);
+lightboxPrev.addEventListener("click", () => stepLightbox(-1));
+lightboxNext.addEventListener("click", () => stepLightbox(1));
+lightboxZoom.addEventListener("click", () => lightboxImg.classList.toggle("is-zoomed"));
+lightboxImg.addEventListener("click", () => lightboxImg.classList.toggle("is-zoomed"));
 lightbox.addEventListener("click", e => { if(e.target === lightbox) closeLightbox(); });
-document.addEventListener("keydown", e => { if(e.key === "Escape") closeLightbox(); });
+document.addEventListener("keydown", e => {
+  if(!lightbox.classList.contains("is-open")) return;
+  if(e.key === "Escape") closeLightbox();
+  if(e.key === "ArrowLeft") stepLightbox(-1);
+  if(e.key === "ArrowRight") stepLightbox(1);
+});
 
 // ============================================================
 // HERO KPI COUNT-UP (runs once, respects reduced motion)
@@ -232,3 +266,46 @@ document.querySelectorAll(".kpi__value[data-count]").forEach(countUp);
 // ============================================================
 const track = document.querySelector(".skillstrip__track");
 if(track){ track.innerHTML += track.innerHTML; }
+
+// ============================================================
+// SCROLL PROGRESS + STICKY NAV
+// ============================================================
+const scrollBar = document.getElementById("scroll-progress");
+const nav = document.querySelector(".nav");
+let scrollTicking = false;
+
+function onScroll(){
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  if(scrollBar){
+    scrollBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
+  }
+  nav.classList.toggle("is-scrolled", scrollTop > 10);
+  scrollTicking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if(!scrollTicking){
+    window.requestAnimationFrame(onScroll);
+    scrollTicking = true;
+  }
+}, { passive: true });
+onScroll();
+
+// ============================================================
+// SCROLL REVEAL (respects reduced motion)
+// ============================================================
+const revealEls = document.querySelectorAll("[data-reveal]");
+if(prefersReduced || !("IntersectionObserver" in window)){
+  revealEls.forEach(el => el.classList.add("is-revealed"));
+}else{
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  revealEls.forEach(el => revealObserver.observe(el));
+}
