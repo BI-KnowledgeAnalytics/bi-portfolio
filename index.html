@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DataVision Works — Power BI Development &amp; Data Storytelling</title>
 <meta name="description" content="Power BI developer portfolio — dashboards spanning sales, operations, customer analytics, and project management.">
+<link rel="canonical" href="https://bi-knowledgeanalytics.github.io/bi-portfolio/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DataVision Works">
+<meta property="og:title" content="DataVision Works — Power BI Development &amp; Data Storytelling">
+<meta property="og:description" content="Power BI developer portfolio — dashboards spanning sales, operations, customer analytics, and project management.">
+<meta property="og:image" content="https://bi-knowledgeanalytics.github.io/bi-portfolio/assets/og-cover.png">
+<meta property="og:url" content="https://bi-knowledgeanalytics.github.io/bi-portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DataVision Works — Power BI Development &amp; Data Storytelling">
+<meta name="twitter:description" content="Power BI developer portfolio — dashboards spanning sales, operations, customer analytics, and project management.">
+<meta name="twitter:image" content="https://bi-knowledgeanalytics.github.io/bi-portfolio/assets/og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,6 +25,7 @@
 <body>
 
 <div class="grain"></div>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
 <header class="nav">
   <a href="#top" class="nav__mark">
@@ -34,7 +47,7 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero__copy">
+    <div class="hero__copy" data-reveal>
       <p class="eyebrow">Power BI Development &amp; Data Storytelling</p>
       <h1 class="hero__title">Dashboards that turn<br>raw data into <span class="hero__title-accent">decisions.</span></h1>
       <p class="hero__sub">DataVision Works designs and builds Power BI dashboards that turn spreadsheets and warehouse tables into clear, confident decisions — data modeling, DAX, and interface design, end to end.</p>
@@ -49,7 +62,7 @@
       </dl>
     </div>
 
-    <div class="hero__widget" aria-hidden="true">
+    <div class="hero__widget" aria-hidden="true" data-reveal data-reveal-delay="120">
       <div class="live-dash">
         <div class="live-dash__bar">
           <span class="live-dash__dot"></span>
@@ -113,11 +126,11 @@
 
   <!-- ============ WHY NORTHSTAR ============ -->
   <section class="why" id="why">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <p class="eyebrow">Why DataVision</p>
       <h2>A better dashboard becomes<br>a better business habit.</h2>
     </div>
-    <div class="why__grid">
+    <div class="why__grid" data-reveal data-reveal-delay="100">
       <article class="why__card">
         <span class="why__num">01</span>
         <h3>Models before screens</h3>
@@ -143,12 +156,12 @@
 
   <!-- ============ WORK ============ -->
   <section class="work" id="work">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <p class="eyebrow">Selected work</p>
       <h2>Fourteen dashboards, <br>four kinds of problem.</h2>
     </div>
 
-    <div class="filters" role="tablist" aria-label="Filter projects by category">
+    <div class="filters" role="tablist" aria-label="Filter projects by category" data-reveal data-reveal-delay="100">
       <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
       <button class="filter" data-filter="sales" role="tab" aria-selected="false">Sales &amp; Revenue</button>
       <button class="filter" data-filter="pm" role="tab" aria-selected="false">Project Management</button>
@@ -162,14 +175,14 @@
   <!-- ============ SERVICES ============ -->
   <section class="services" id="services">
     <div class="services__top">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">What we do</p>
         <h2>End-to-end Power BI,<br>from messy source to clean report.</h2>
       </div>
       <p class="services__intro">One practice, one hand. Pick a single deliverable or the whole engagement — every project is scoped, built, and verified against the data.</p>
     </div>
 
-    <div class="services__grid">
+    <div class="services__grid" data-reveal data-reveal-delay="120">
       <article class="services__item">
         <h3>Dashboard design &amp; build</h3>
         <p>Focused pages, executive layouts, and drill-downs built around the metric that actually decides.</p>
@@ -188,7 +201,7 @@
       </article>
     </div>
 
-    <div class="timeline">
+    <div class="timeline" data-reveal>
       <div class="timeline__head">
         <p class="eyebrow">Typical engagement</p>
         <h3>From raw tables to a trustworthy dashboard in about three weeks.</h3>
@@ -215,11 +228,11 @@
 
   <!-- ============ APPROACH ============ -->
   <section class="approach" id="approach">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <p class="eyebrow">How we work</p>
       <h2>From a raw table<br>to a report people trust.</h2>
     </div>
-    <div class="approach__grid">
+    <div class="approach__grid" data-reveal data-reveal-delay="100">
       <div class="approach__item">
         <span class="approach__mark">Model</span>
         <p>Star schemas, clean relationships, and DAX measures built for performance — not just to make one chart work.</p>
@@ -235,42 +248,9 @@
     </div>
   </section>
 
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="testimonials" id="testimonials">
-    <div class="section-head">
-      <p class="eyebrow">Client notes</p>
-      <h2>What teams say when<br>the dashboard is live.</h2>
-    </div>
-    <!-- Placeholder quotes — swap in real client copy before launch -->
-    <div class="testimonials__grid">
-      <figure class="testimonial">
-        <blockquote>"We stopped emailing the spreadsheet around. The dashboard settled the monthly debate in one screenshot."</blockquote>
-        <figcaption>
-          <span class="testimonial__name">Operations lead</span>
-          <span class="testimonial__role">Construction, MEA</span>
-        </figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote>"The measures match head-office numbers exactly. That alone bought the dashboard a lot of trust."</blockquote>
-        <figcaption>
-          <span class="testimonial__name">Financial controller</span>
-          <span class="testimonial__role">Mining</span>
-        </figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote>"Three weeks from CSVs to a dashboard the sales team actually use. The handover was painless."</blockquote>
-        <figcaption>
-          <span class="testimonial__name">Customer analytics lead</span>
-          <span class="testimonial__role">Retail &amp; e-commerce</span>
-        </figcaption>
-      </figure>
-    </div>
-    <p class="trusted">Trusted across mining, construction, retail &amp; e-commerce</p>
-  </section>
-
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
-    <div class="about__grid">
+    <div class="about__grid" data-reveal>
       <div class="about__bio">
         <p class="eyebrow">About DataVision</p>
         <h2>An independent practice<br>for dashboards that have to work.</h2>
@@ -288,9 +268,9 @@
 
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="contact">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Have a dataset that<br>deserves a better dashboard?</h2>
-    <p class="contact__sub">Tell us what you're measuring — we'll show you how it should look on screen.</p>
+    <p class="eyebrow" data-reveal>Get in touch</p>
+    <h2 data-reveal data-reveal-delay="80">Have a dataset that<br>deserves a better dashboard?</h2>
+    <p class="contact__sub" data-reveal data-reveal-delay="160">Tell us what you're measuring — we'll show you how it should look on screen.</p>
     <div class="contact__links">
       <a href="mailto:datavisionworks@gmail.com" class="contact__link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
@@ -321,6 +301,8 @@
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox__close" id="lightbox-close" aria-label="Close">✕</button>
+  <button class="lightbox__prev" id="lightbox-prev" aria-label="Previous project">‹</button>
+  <button class="lightbox__next" id="lightbox-next" aria-label="Next project">›</button>
   <div class="lightbox__inner">
     <img id="lightbox-img" src="" alt="">
     <div class="lightbox__meta">
@@ -330,6 +312,8 @@
       <ul class="lightbox__tags" id="lightbox-tags"></ul>
     </div>
   </div>
+  <button class="lightbox__zoom" id="lightbox-zoom" aria-label="Toggle zoom">⤢</button>
+  <span class="lightbox__count" id="lightbox-count" aria-hidden="true"></span>
 </div>
 
 <script src="script.js"></script>
