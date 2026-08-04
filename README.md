@@ -1,4 +1,4 @@
-# BI Knowledge Analytics — Portfolio
+# DataVision Works — Portfolio
 
 A static one-page portfolio for a Power BI developer, built with plain HTML/CSS/JS (no build step needed) — ready for GitHub Pages.
 
