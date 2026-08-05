@@ -116,13 +116,13 @@ ul{ list-style: none; }
   box-shadow: 0 6px 24px rgba(20,33,61,0.06);
 }
 .nav__mark{
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 0;
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 14.5px;
   letter-spacing: 0.01em;
 }
-.nav__mark-icon{ color: var(--accent); width: 20px; height: 20px; }
+.nav__mark-icon{ color: var(--accent); width: 36px; height: 36px; }
 .nav__mark-icon svg{ width: 100%; height: 100%; }
 .nav__links{ display: flex; gap: 32px; font-size: 14.5px; color: var(--slate); }
 .nav__links a{ transition: color 0.15s; }
@@ -174,6 +174,11 @@ ul{ list-style: none; }
   font-size: 17.5px;
   color: var(--slate);
   line-height: 1.6;
+}
+
+.hero__sub-accent{
+  font-weight: 700;
+  color: var(--gold);
 }
 
 .hero__actions{
@@ -711,13 +716,19 @@ ul{ list-style: none; }
   border-top: 1px solid var(--border);
 }
 .footer__brand{
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; gap: 0;
   font-family: var(--font-mono);
   font-weight: 600; font-size: 14px;
   color: var(--ink);
 }
-.footer__brand-icon{ width: 18px; height: 18px; color: var(--accent); }
+.footer__brand-icon{ width: 36px; height: 36px; color: var(--accent); }
 .footer__brand-icon svg{ width: 100%; height: 100%; }
+.footer__brand-text{ display: flex; flex-direction: column; gap: 2px; }
+.footer__tagline{
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 400;
+  color: var(--slate-soft);
+}
 .footer__note{
   font-family: var(--font-mono);
   font-size: 12.5px; color: var(--slate-soft);
