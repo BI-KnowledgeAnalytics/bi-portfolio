@@ -1,29 +1,15 @@
-# DataVision Works — Portfolio
+# OptiData Analytics — Portfolio
 
 A static one-page portfolio for a Power BI developer, built with plain HTML/CSS/JS (no build step needed) — ready for GitHub Pages.
 
-## Before you publish
-
-1. Open `index.html` and update:
-   - `mailto:your.email@example.com` → your real email (contact section, near the bottom)
-   - `https://github.com/bi-knowledgeanalytics` → your real GitHub profile URL, if different
-2. Open `script.js` and check the `PROJECTS` array — feel free to edit titles/descriptions/tags for accuracy.
+Live site: <https://bi-knowledgeanalytics.github.io/bi-portfolio/>
 
 ## Deploy to GitHub Pages
 
-1. Create a new repo (e.g. `your-username.github.io`, or any name like `portfolio`).
-2. Upload all files in this folder **keeping the folder structure**:
-   ```
-   index.html
-   style.css
-   script.js
-   assets/projects/*.jpg
-   ```
-3. Go to your repo → **Settings → Pages**.
-4. Under "Build and deployment", set **Source: Deploy from a branch**, branch: `main`, folder: `/ (root)`.
-5. Save. Your site will be live at:
-   - `https://your-username.github.io/` (if the repo is named `your-username.github.io`), or
-   - `https://your-username.github.io/repo-name/` (any other repo name).
+1. Push this repo to GitHub (it lives at `BI-KnowledgeAnalytics/bi-portfolio`).
+2. Go to the repo → **Settings → Pages**.
+3. Under "Build and deployment", set **Source: Deploy from a branch**, branch: `main`, folder: `/ (root)`.
+4. Save. Your site will be live at `https://bi-knowledgeanalytics.github.io/bi-portfolio/`.
 
 ## Structure
 
